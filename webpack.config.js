@@ -2,18 +2,20 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // const CopyPlugin = require('copy-webpack-plugin');
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 
-// const mode = process.env.NODE_ENV || 'development';
-// const devMode = mode === 'development';
+const mode = process.env.NODE_ENV || 'development';
+const devMode = mode === 'development';
 // const target = devMode ? 'web' : 'browserslist';
-// const devtool = devMode ? 'source-map' : undefined;
+// если проект собирается в режиме разработки, то подключаем source-map
+const devtool = devMode ? 'source-map' : undefined;
 
 module.exports = {
-  // mode,
+  mode,
   // target,
-  // devtool,
+  devtool,
   devServer: {
-    port: 3000,
+    port: "auto",
     open: true,
     hot: true,
   },
@@ -22,7 +24,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     filename: '[name].[contenthash].js',
-    // assetModuleFilename: 'assets/[name][ext]',
+    assetModuleFilename: 'asset/[name][ext]',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -41,16 +43,32 @@ module.exports = {
       {
         test: /\.(c|sa|sc)ss$/i,
         use: [
-          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+          devMode ? "style-loader" : MiniCssExtractPlugin.loader,
           'css-loader',
-          'group-css-media-queries-loader',
-          {
+          { 
             loader: 'sass-loader',
             options: {
               sourceMap: true,
             },
           },
         ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(mp[3|4])$/i,
+        type: 'asset/resource',
+        // use:[
+        //   {
+        //     loader: 'file-loader',
+        //     options: {
+        //       name: '[name].[ext]',
+        //       // outputPath: 'audio',
+        //     },
+        //   }
+        // ],
       },
       // Обработка шрифтов
       // {

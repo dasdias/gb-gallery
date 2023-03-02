@@ -1,5 +1,15 @@
-body {
-  background-color: rgb(113, 103, 149);
-  margin: 0;
-  padding: 0;
+*, *::after, *::before {
+
+  box-sizing: border-box;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
 }
