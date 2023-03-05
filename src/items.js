@@ -2,9 +2,11 @@ import image01 from './images/1.jpg'
 import image02 from './images/2.jpg'
 import image03 from './images/3.jpg'
 import image04 from './images/4.gif'
+
 import audio01 from './audio/1.mp3'
 import audio02 from './audio/2.mp3'
 import audio03 from './audio/3.mp3'
+
 import video01 from './video/video01.mp4'
 import video02 from './video/video02.mp4'
 import video03 from './video/video03.mp4'
