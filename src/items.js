@@ -39,7 +39,7 @@ export const items = [
   {
     type: 'audio',
     resource: audio02,
-    title: 'Лесной ручей"'
+    title: 'Звуки речного ручья"'
   },
   {
     type: 'audio',
@@ -49,16 +49,16 @@ export const items = [
   {
     type: 'video',
     resource: video01,
-    title: 'Музей макет "Эподром"'
+    title: 'Музей-макет "Эподром"'
   },
   {
     type: 'video',
     resource: video03,
-    title: 'Музей макет "Дворик с фонтаном"'
+    title: 'Музей-макет "Дворик с фонтаном"'
   },
   {
     type: 'video',
     resource: video04,
-    title: 'Музей макет "Промышленная зона с ЖД мостом"'
+    title: 'Музей-макет "Промышленная зона с ЖД мостом"'
   },
 ]
