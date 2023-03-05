@@ -1,0 +1,66 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
+  column-gap: 24px;
+  row-gap: 30px;
+  justify-content: center;
+
+  // .gallery__card
+
+  &__card {}
+
+  // .gallery__img
+
+  &__img {
+    position: relative;
+    padding-bottom: 56.25%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  // .gallery__audio
+  &__audio {
+    position: relative;
+    padding-bottom: 56.25%;
+
+    audio {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+    }
+  }
+
+  // .gallery__video
+  &__video {
+    position: relative;
+    padding-bottom: 56.25%;
+
+    video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .gallery__text
+
+  &__text {
+    padding: 4px 8px;
+  }
+}

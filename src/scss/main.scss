@@ -1,5 +1,6 @@
-@import "../libs/normalize.css";
+@import "~normalize.css"; // знак ~ говорит, что библиотеку нужно искать в node_modules
 @import "./base/_base";
+@import "./gallery/gallery";
 
 
 
