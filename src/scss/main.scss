@@ -2,7 +2,10 @@
 @import "./base/_base";
 @import "./gallery/gallery";
 
-
+:root {
+  --bgcolor-card: #f8f8f8;
+  --bradius: 8px;
+}
 
 h1 {
   color: #fc0505;

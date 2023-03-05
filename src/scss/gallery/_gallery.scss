@@ -14,6 +14,8 @@
   &__img {
     position: relative;
     padding-bottom: 56.25%;
+    background-color: var(--bgcolor-card);
+    border-radius: var(--bradius);
 
     img {
       position: absolute;
@@ -22,7 +24,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center;
+      object-position: center bottom;
     }
   }
 
@@ -30,6 +32,8 @@
   &__audio {
     position: relative;
     padding-bottom: 56.25%;
+    background-color: var(--bgcolor-card);
+    border-radius: var(--bradius);
 
     audio {
       position: absolute;
@@ -46,6 +50,8 @@
   &__video {
     position: relative;
     padding-bottom: 56.25%;
+    background-color: var(--bgcolor-card);
+    border-radius: var(--bradius);
 
     video {
       position: absolute;
@@ -61,6 +67,8 @@
   // .gallery__text
 
   &__text {
-    padding: 4px 8px;
+    padding: 15px 8px 8px;
+    font-weight: 700;
+    font-size: 18px;
   }
 }
